@@ -530,7 +530,7 @@ class Premium_Image_Separator extends Widget_Base {
 	 * @since 1.0.0
 	 * @access protected
 	 */
-    protected function _content_template() {
+    protected function content_template() {
         ?>
         <#
             var type        = settings.separator_type,

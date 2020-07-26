@@ -847,7 +847,6 @@
   font-size: 17px;
   line-height: 3em; }
 
-/************************************ * Digit and unit side by side *************************************/
 .side .pre_countdown-section .pre_countdown-amount,
 .side .pre_countdown-section .pre_countdown-period {
   display: inline-block; }
@@ -855,7 +854,6 @@
 .side .pre_countdown-section .pre_countdown-amount {
   margin-right: 5px; }
 
-/************************************ * Digit and unit up and down *************************************/
 .down .pre_countdown-section .pre_countdown-amount,
 .down .pre_countdown-section .pre_countdown-period {
   display: block; }

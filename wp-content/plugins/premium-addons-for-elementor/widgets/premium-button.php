@@ -1130,7 +1130,7 @@ class Premium_Button extends Widget_Base {
 	 * @since 1.0.0
 	 * @access protected
 	 */
-    protected function _content_template() {
+    protected function content_template() {
         ?>
         <#
         

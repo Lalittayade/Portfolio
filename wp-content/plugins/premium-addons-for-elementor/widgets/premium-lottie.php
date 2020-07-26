@@ -577,7 +577,7 @@ class Premium_Lottie extends Widget_Base {
 	 * @since 3.20.2
 	 * @access protected
 	 */
-    protected function _content_template() {
+    protected function content_template() {
 
         ?>
 

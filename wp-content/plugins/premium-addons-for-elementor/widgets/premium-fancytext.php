@@ -227,6 +227,16 @@ class Premium_Fancytext extends Widget_Base {
                 ]
             ]
         );
+
+        $this->add_control('loop_count',
+            [
+                'label'         => __('Loop Count', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::NUMBER,
+                'condition'     => [
+                    'premium_fancy_text_effect!' => [ 'typing', 'slide' ],
+                ],
+            ]
+        );
         
         $this->add_control('premium_fancy_text_back_speed',
             [
@@ -594,7 +604,8 @@ class Premium_Fancytext extends Widget_Base {
 
             $fancytext_settings = [
                 'effect'        => $effect,
-                'delay'         => $settings['premium_fancy_text_zoom_delay']
+                'delay'         => $settings['premium_fancy_text_zoom_delay'],
+                'count'         => $settings['loop_count'],
             ];
 
             if( $effect === 'custom' ) {
@@ -648,7 +659,7 @@ class Premium_Fancytext extends Widget_Base {
 	 * @since 1.0.0
 	 * @access protected
 	 */
-    protected function _content_template() {
+    protected function content_template() {
         ?>
         <#
         
@@ -703,6 +714,7 @@ class Premium_Fancytext extends Widget_Base {
             view.addRenderAttribute( 'suffix', 'class', 'premium-fancy-text-span-align' );
             
             fancyTextSettings.delay         = settings.premium_fancy_text_zoom_delay;
+            fancyTextSettings.count         = settings.loop_count;
 
             if( 'custom' === effect ) {
                 fancyTextSettings.animation = settings.custom_animation;

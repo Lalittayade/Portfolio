@@ -507,9 +507,17 @@
                 var $item = $elem.find(".premium-fancy-list-items"),
                     current = 1;
 
-                var delay = (settings.delay || 2.5) * 1000;
+                //Get effect settings
+                var delay = (settings.delay || 2.5) * 1000,
+                    loopCount = settings.count;
 
-                setInterval(function () {
+                //If Loop Count option is set
+                if (loopCount) {
+                    var currentLoop = 1,
+                        fancyStringsCount = $elem.find(".premium-fancy-list-items").length;
+                }
+
+                var loopInterval = setInterval(function () {
 
                     var animationClass = "";
 
@@ -533,6 +541,15 @@
                     if ($item.length === current)
                         current = 0;
 
+                    //Increment interval and check if loop count is reached
+                    if (loopCount) {
+                        currentLoop++;
+
+                        if ((fancyStringsCount * loopCount) === currentLoop)
+                            clearInterval(loopInterval);
+                    }
+
+
                 }, delay);
             }
         }
@@ -540,7 +557,9 @@
 
     /****** Premium Countdown Handler ******/
     var PremiumCountDownHandler = function ($scope, $) {
+
         var countDownElement = $scope.find(".premium-countdown").each(function () {
+
             var countDownSettings = $(this).data("settings");
             var label1 = countDownSettings["label1"],
                 label2 = countDownSettings["label2"],
@@ -575,6 +594,7 @@
                     }
                 });
             }
+
             times = $(this).find(".premium-countdown-init").pre_countdown("getTimes");
 
             function runTimer(el) {

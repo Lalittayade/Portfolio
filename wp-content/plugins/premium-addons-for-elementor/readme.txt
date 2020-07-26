@@ -5,15 +5,15 @@ Donate Link: https://premiumaddons.com/?utm_source=wp-repo&utm_medium=link&utm_c
 Requires at least: 5.0
 Tested Up To: 5.4.2
 Requires PHP: 5.4
-Stable Tag: 3.20.8
+Stable Tag: 3.20.9
 License: GPL v3.0
 License URI: https://opensource.org/licenses/GPL-3.0
 
-Elementor Widgets and Addons like Vertical Scroll, Grid, Carousel, Google Maps, Pricing Tables, Lottie Animations, Countdown, Testimonials, Blog and more.
+Premium Addons for Elementor plugin includes widgets and addons like Blog Post Grid, Gallery, Carousel, Modal Popup, Lottie Animations, Google Maps, Pricing Tables, Countdown, Testimonials and much more.
 
 == Description ==
 
-Supercharge your Elementor Page Builder with 50+ highly customizable widgets and add-ons that will give you the ability to build sophisticated websites in less time with no coding required. Both Elementor and Premium Addons plugins take your WordPress website to the next level.
+Supercharge your Elementor Page Builder with 53+ highly customizable Elementor addons and widgets, 270+ premade Elementor templates that will give you the ability to build sophisticated websites in less time with no coding required. Both Elementor and Premium Addons plugins take your WordPress website to the next level.
 
 [**Check Elementor Widgets & Addons Demo Pages**](https://premiumaddons.com/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme)
 
@@ -179,6 +179,12 @@ Premium Addons for Elementor is 100% Ads Free, Ads can only be detected from You
 14. Premium Progress Bar Widget for Elementor
 
 == Changelog ==
+
+= 3.20.9 =
+
+- Tweak: Added Loop Count option in Fancy Text widget.
+- Tweak: Elementor Deprecated functions updated.
+- Fixed: RTL issues in Banner and Title widgets.
 
 = 3.20.8 =
 
